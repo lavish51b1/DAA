@@ -4,30 +4,7 @@ A collection of basic algorithms implemented in C.
 
 ---
 
-## 1. Activity Selection
-
-### What it does
-* Selects the maximum number of non-overlapping activities.
-
-### Approach
-* **Greedy Algorithm**
-* Select activities based on the earliest finish time.
-
-### Example
-- Start: `[1, 3, 0, 5, 8, 5]`
-- Finish: `[2, 4, 6, 7, 9, 9]`
-- Selected: `A1 -> A2 -> A4 -> A5`
-
-### Complexity
-- Time: `O(n²)` (with Bubble Sort)
-- Space: `O(1)`
-
-### File
-* `activitySelection.c`
-
----
-
-## 2. Binary Search
+## 1. Binary Search
 
 ### What it does
 * Searches for an element in a sorted array by repeatedly dividing the search space into half.
@@ -44,12 +21,12 @@ A collection of basic algorithms implemented in C.
 - Time: `O(log n)`
 - Space: `O(1)` (iterative)
 
-### File
-* `binary.c`
+### Code
+* [View Code](binary.c)
 
 ---
 
-## 3. Factorial
+## 2. Factorial
 
 ### What it does
 * Calculates the factorial of a non-negative integer.
@@ -66,30 +43,51 @@ A collection of basic algorithms implemented in C.
 - Time: `O(n)`
 - Space: `O(1)` (iterative)
 
-### File
-* `factorial.c`
+### Code
+* [View Code](factorial.c)
 
 ---
 
-## 4. Matrix Multiplication
+## 3. Tower of Hanoi
 
 ### What it does
-* Multiplies two compatible matrices to produce a resultant matrix.
+* Moves `n` disks from the source rod to the destination rod using an auxiliary rod.
 
 ### Approach
-* Multiply each row of the first matrix with each column of the second matrix.
+* **Recursion**
 
 ### Example
-- `A = [[1, 2], [3, 4]]`
-- `B = [[5, 6], [7, 8]]`
-- `A × B = [[19, 22], [43, 50]]`
+- `n = 3`
+- Minimum moves: `2³ - 1 = 7`
 
 ### Complexity
-- Time: `O(n³)` for `n × n` matrices
-- Space: `O(n²)` for the resultant matrix
+- Time: `O(2ⁿ)`
+- Space: `O(n)` due to recursion
 
-### File
-* `matrixMultiplication.c`
+### Code
+* [View Code](tower_of_hanoi.c)
+
+---
+
+## 4. Quick Sort
+
+### What it does
+* Sorts an array by selecting a pivot and partitioning elements around it.
+
+### Approach
+* **Divide and Conquer**
+
+### Example
+- Input: `[10, 7, 8, 9, 1]`
+- Output: `[1, 7, 8, 9, 10]`
+
+### Complexity
+- Best/Average: `O(n log n)`
+- Worst: `O(n²)`
+- Space: `O(log n)` average
+
+### Code
+* [View Code](quicksort.c)
 
 ---
 
@@ -109,48 +107,50 @@ A collection of basic algorithms implemented in C.
 - Time: `O(n log n)`
 - Space: `O(n)`
 
-### File
-* `merge_sort.c`
+### Code
+* [View Code](merge_sort.c)
 
 ---
 
-## 6. Quick Sort
+## 6. Activity Selection
 
 ### What it does
-* Sorts an array by selecting a pivot and partitioning elements around it.
+* Selects the maximum number of non-overlapping activities.
 
 ### Approach
-* **Divide and Conquer**
+* **Greedy Algorithm**
+* Selects activities based on the earliest finish time.
 
 ### Example
-- Input: `[10, 7, 8, 9, 1]`
-- Output: `[1, 7, 8, 9, 10]`
+- Start: `[1, 3, 0, 5, 8, 5]`
+- Finish: `[2, 4, 6, 7, 9, 9]`
+- Selected: `A1 -> A2 -> A4 -> A5`
 
 ### Complexity
-- Best/Average: `O(n log n)`
-- Worst: `O(n²)`
-- Space: `O(log n)` average
+- Time: `O(n²)` (with Bubble Sort)
+- Space: `O(1)`
 
-### File
-* `quicksort.c`
+### Code
+* [View Code](activitySelection.c)
 
 ---
 
-## 7. Tower of Hanoi
+## 7. Matrix Multiplication
 
 ### What it does
-* Moves `n` disks from the source rod to the destination rod using an auxiliary rod.
+* Multiplies two compatible matrices to produce a resultant matrix.
 
 ### Approach
-* **Recursion**
+* Multiplies each row of the first matrix with each column of the second matrix.
 
 ### Example
-- `n = 3`
-- Minimum moves: `2³ - 1 = 7`
+- `A = [[1, 2], [3, 4]]`
+- `B = [[5, 6], [7, 8]]`
+- `A × B = [[19, 22], [43, 50]]`
 
 ### Complexity
-- Time: `O(2ⁿ)`
-- Space: `O(n)`
+- Time: `O(n³)` for `n × n` matrices
+- Space: `O(n²)` for the resultant matrix
 
-### File
-* `tower_of_hanoi.c`
+### Code
+* [View Code](matrixMultiplication.c)
